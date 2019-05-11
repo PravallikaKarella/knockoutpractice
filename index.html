@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> Knockout </title>
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    </head>
+    <body>
+        Employee List:<ul><div data-bind="foreach:details">
+          <br>  <li>
+                <b>ID:</b>&nbsp<span data-bind="text: $index"></span>
+                <b>Name:</b>&nbsp<span data-bind="text: name"></span>
+                <b>Age:</b>&nbsp<span data-bind="text: age"></span>
+                <button  data-bind="click: $parent.removePerson" value ="Remove">Remove</button>
+            </li></div></ul>
+                  
+        <input type="button" value="Click to add a Employee"data-bind="click:addPerson">
+        <script src= "./index.js"></script>
+    </body>
+</html>
